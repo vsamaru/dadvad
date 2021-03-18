@@ -1,20 +1,25 @@
 
 
+
+
 module.exports = {
-  entry: './src/index.ts',
-  
-  /*devtool: 'inline-source-map',*/
-  module: {
-    rules: [{
-      test: /\.tsx?$/,
-      use: 'ts-loader',
-      exclude: /node_modules/
-    }]
-  },
-  resolve: {
-    extensions: ['.ts', '.js']
-  },
   output: {
-    filename: 'worker.js'
-  }
-};
+    filename: `worker.js`
+  },
+  mode: "production",
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+    plugins: [],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true,
+        },
+      },
+    ],
+  },
+}
