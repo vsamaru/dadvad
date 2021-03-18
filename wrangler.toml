@@ -1,0 +1,17 @@
+name = "s"
+type = "webpack"
+account_id = "1c5f0bb50c92188dd028fa501cb54b88"
+workers_dev = true
+webpack_config = "webpack.config.js"
+
+[vars]
+B=''
+TOKEN="784995387:AAE-SRzS8X815Y6_Gc16fgVEjcvC_BqIBY0"
+
+# [site]
+# bucket = "./public"
+# entry-point = "./"
+
+[[kv-namespaces]]
+binding = "LINKS"
+id = "8e32432036fe4eca9a4ea84a8d84d829"
